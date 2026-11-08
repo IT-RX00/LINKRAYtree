@@ -1,0 +1,156 @@
+/* Tazi Group theme — navy + gold, taken from the group logo */
+:root {
+	--tazi-navy: #13294B;
+	--tazi-gold: #B8892E;
+	--tazi-bg: #F6F4EF;
+	--tazi-card: #FFFFFF;
+	--tazi-muted: #5B6578;
+}
+
+body {
+	background-color: var(--tazi-bg);
+	color: var(--tazi-navy);
+}
+
+/* Hero photo */
+.hero {
+	width: 100%;
+	height: 15rem;
+	overflow: hidden;
+	background: var(--tazi-navy);
+}
+.hero-photo {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: 60% 45%;
+	display: block;
+}
+
+.container {
+	padding-top: 0;
+}
+
+/* Group logo overlapping the hero */
+.brand-avatar {
+	width: 9rem;
+	height: 9rem;
+	margin: -4.5rem auto var(--spacing-m);
+	display: block;
+	border-radius: 50%;
+	object-fit: cover;
+	background: #fff;
+	border: 4px solid #fff;
+	padding: 0.5rem;
+	box-sizing: border-box;
+	box-shadow: 0 6px 20px rgba(19, 41, 75, 0.18);
+	position: relative;
+}
+
+h1 {
+	color: var(--tazi-navy);
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: var(--scale-4);
+	margin-bottom: var(--spacing-xs);
+}
+
+.container p.tagline {
+	color: var(--tazi-gold);
+	font-size: var(--scale-0);
+	letter-spacing: 0.18em;
+	text-transform: uppercase;
+	font-weight: 600;
+	margin-bottom: var(--spacing-l);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 0.75rem;
+}
+.tagline::before,
+.tagline::after {
+	content: "";
+	width: 2.5rem;
+	height: 1px;
+	background: var(--tazi-gold);
+}
+
+/* Company cards */
+.company-stack {
+	display: flex;
+	flex-direction: column;
+	gap: 0.875rem;
+	max-width: 26rem;
+	margin: 0 auto;
+}
+.company {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	padding: 0.75rem 1rem 0.75rem 0.75rem;
+	background: var(--tazi-card);
+	border: 1px solid rgba(19, 41, 75, 0.1);
+	border-radius: 0.875rem;
+	text-decoration: none;
+	color: var(--tazi-navy);
+	text-align: left;
+	box-shadow: 0 1px 3px rgba(19, 41, 75, 0.06);
+	transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+}
+.company:hover,
+.company:focus-visible {
+	color: var(--tazi-navy);
+	transform: translateY(-2px);
+	border-color: var(--tazi-gold);
+	box-shadow: 0 8px 20px rgba(19, 41, 75, 0.12);
+}
+.company-logo {
+	width: 4rem;
+	height: 4rem;
+	flex-shrink: 0;
+	border-radius: 0.625rem;
+	object-fit: contain;
+	background: #fff;
+	border: 1px solid rgba(19, 41, 75, 0.08);
+}
+.company-logo--dark {
+	background: #002147;
+	padding: 0.25rem;
+	box-sizing: border-box;
+}
+.company-text {
+	display: flex;
+	flex-direction: column;
+	min-width: 0;
+}
+.company-name {
+	font-weight: 700;
+	font-size: 1.125rem;
+	line-height: 1.3;
+}
+.company-url {
+	font-size: 0.875rem;
+	color: var(--tazi-muted);
+}
+.company::after {
+	content: "→";
+	margin-left: auto;
+	color: var(--tazi-gold);
+	font-weight: 700;
+}
+
+footer {
+	color: var(--tazi-muted);
+	font-size: 0.875rem;
+}
+footer a {
+	color: var(--tazi-navy);
+}
+
+@media (max-width: 34.375rem) {
+	.hero { height: 11rem; }
+	.brand-avatar { width: 7.5rem; height: 7.5rem; margin-top: -3.75rem; }
+	h1 { font-size: var(--scale-3); }
+	.container p.tagline { font-size: 0.8rem; letter-spacing: 0.14em; }
+}

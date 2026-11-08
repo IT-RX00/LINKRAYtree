@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "static",
+      "runtimeExecutable": "powershell",
+      "runtimeArgs": ["-NoProfile", "-ExecutionPolicy", "Bypass", "-File", "C:\\Users\\IT\\AppData\\Local\\Temp\\claude\\23c1f6e6df8353ee\\f2cf7dbc-e6f0-419c-bb86-c1bf5e04c298\\scratchpad\\serve.ps1", "-Root", "C:\\Users\\IT\\Documents\\GitHub\\LINKRAYtree", "-Port", "8080"],
+      "port": 8080
+    }
+  ]
+}
